@@ -71,6 +71,36 @@ footer.jta-footer{border-top:1px solid #333336;padding:32px 0}
 .jta-nav{flex-wrap:wrap;gap:8px 24px}
 @media(max-width:600px){.jta-nav>div{gap:14px !important}.nav-brand{font-size:13px}.nav-link{font-size:13px}.jta-nav>a.nav-link{display:none}}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #5B7A8F;outline-offset:2px}
+
+/* form-first hero */
+.jta-inner{max-width:1080px}
+.story-section .jta-inner>*,.what-section .jta-inner>*,.quote-section .jta-inner>*{max-width:680px}
+.hero{padding:64px 0 64px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 420px;grid-template-areas:"copy form" "stats form";grid-template-rows:auto 1fr;column-gap:72px;align-items:start}
+.hero-copy{grid-area:copy}
+.hero-copy .hero-body{margin-bottom:0}
+.hero-grid .stats{grid-area:stats;margin:36px 0 0;border-bottom:none;padding-bottom:0}
+.hero-grid .form-section{grid-area:form;margin-bottom:0;padding:32px}
+.hero-grid .form-row{flex-direction:column}
+.hero-grid .form-field{min-width:0}
+.btn-submit:hover{background:#5B7A8F}
+.story-section{padding:56px 0 60px}
+.story-section .honest-line{margin:28px 0 0}
+@media(max-width:900px){
+.hero-grid{grid-template-columns:1fr;grid-template-areas:"copy" "form" "stats";max-width:680px}
+.hero-grid .form-section{margin-top:28px}
+}
+@media(max-width:600px){
+.hero{padding:28px 0 44px}
+.kicker{margin-bottom:14px}
+h1.jta-h1{margin-bottom:16px;font-size:32px}
+.hero-copy .hero-body{font-size:16px;line-height:1.6}
+.hero-grid .form-section{margin-top:20px;padding:22px 20px}
+.form-sub{display:none}
+.form-headline{font-size:21px;margin-bottom:16px}
+.hero-grid .stats{margin-top:28px}
+.story-section{padding:40px 0 44px}
+}
 </style>
 </head>
 <body>
@@ -87,19 +117,13 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #5B7A
 </nav>
 
 <div class="hero">
-  <div class="jta-inner">
+  <div class="jta-inner hero-grid">
+    <div class="hero-copy">
     <div class="kicker">Slow Travel Letters</div>
     <h1 class="jta-h1">The honest version of starting over.</h1>
     <div class="hero-body">
       <p>If you are quietly running the numbers on whether a different kind of life is actually possible, this is the letter for that.</p>
-      <p>31 years in sales. Made redundant at 47. Left the UK with my wife and no salary. Now living between Malaysia and Thailand, building income from scratch and documenting every part of it.</p>
-      <p>Every Friday I send one letter. What happened that week. The money, the positions, the decisions, the reality. No performance. Just what's actually going on.</p>
     </div>
-    <p class="honest-line">I don't entirely know what I'm doing yet. That's the point. This is the letter where I work it out.</p>
-    <div class="stats">
-      <div class="stat-item"><span class="stat-number">360+</span><span class="stat-label">readers every Friday</span></div>
-      <div class="stat-item"><span class="stat-number">59.8%</span><span class="stat-label">average open rate</span></div>
-      <div class="stat-item"><span class="stat-number">55</span><span class="stat-label">letters sent since October 2025</span></div>
     </div>
 
     <div class="form-section" id="jta-subscribe">
@@ -130,6 +154,22 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #5B7A
       </form>
       <p class="form-note">No spam. No selling. Just the Friday letter. Reply any time. I read them.</p>
     </div>
+
+    <div class="stats">
+      <div class="stat-item"><span class="stat-number">360+</span><span class="stat-label">readers every Friday</span></div>
+      <div class="stat-item"><span class="stat-number">59.8%</span><span class="stat-label">average open rate</span></div>
+      <div class="stat-item"><span class="stat-number">55</span><span class="stat-label">letters sent since October 2025</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="story-section">
+  <div class="jta-inner">
+    <div class="hero-body">
+      <p>31 years in sales. Made redundant at 47. Left the UK with my wife and no salary. Now living between Malaysia and Thailand, building income from scratch and documenting every part of it.</p>
+      <p>Every Friday I send one letter. What happened that week. The money, the positions, the decisions, the reality. No performance. Just what's actually going on.</p>
+    </div>
+    <p class="honest-line">I don't entirely know what I'm doing yet. That's the point. This is the letter where I work it out.</p>
   </div>
 </div>
 

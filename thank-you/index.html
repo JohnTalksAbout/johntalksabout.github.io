@@ -12,119 +12,54 @@
 <meta property="og:title" content="You're in | John Talks About">
 <meta property="og:description" content="You're on the list. First letter lands on Friday.">
 <meta property="og:url" content="https://www.johntalksabout.com/thank-you/">
-<meta name="twitter:card" content="summary">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{background:#1C1C1E}
-body{background:#1C1C1E;color:#F0F0EE;font-family:'DM Sans',system-ui,sans-serif;font-weight:400;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;margin:0;min-height:100vh}
-.jta-inner{max-width:680px;margin:0 auto;padding:0 24px}
-nav{border-bottom:1px solid #333336;padding:20px 0}
-.jta-nav{display:flex;align-items:center}
-.nav-brand{font-weight:500;font-size:15px;color:#F0F0EE;text-decoration:none;letter-spacing:.04em;text-transform:uppercase}
-.nav-link{font-size:14px;color:#888;text-decoration:none}
-.main{padding:80px 0 100px}
-.kicker{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#5B7A8F;margin-bottom:24px;display:flex;align-items:center;gap:10px}
-.kicker::after{content:'';display:block;width:32px;height:1px;background:#5B7A8F}
-h1.jta-h1{text-transform:none !important;font-family:'Playfair Display',Georgia,serif;font-size:clamp(32px,5vw,46px);font-weight:700;line-height:1.2;color:#fff;margin-bottom:28px;letter-spacing:-.01em}
-.body-text{font-size:18px;line-height:1.75;opacity:.9}
-.body-text p+p{margin-top:16px}
-.divider{border:none;border-top:1px solid #333336;margin:48px 0}
-.inbox-note{background:#2A2A2D;border:1px solid #333336;border-radius:4px;padding:28px 32px;margin-bottom:48px}
-.inbox-label{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#5B7A8F;margin-bottom:12px}
-.inbox-text{font-size:15px;color:#888;line-height:1.65}
-.inbox-text strong{color:#F0F0EE;font-weight:500}
-.next-label{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#888;margin-bottom:28px}
-.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.next-card{background:#2A2A2D;border:1px solid #333336;border-radius:4px;padding:28px;text-decoration:none;display:block}
-.card-eyebrow{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#5B7A8F;margin-bottom:12px}
-.card-title{font-family:'Playfair Display',Georgia,serif;font-size:18px;color:#fff;margin-bottom:8px;line-height:1.3}
-.card-desc{font-size:14px;color:#888;line-height:1.6}
-.sign-off{margin-top:56px;font-size:17px;opacity:.9;line-height:1.7}
-.sign-off p+p{margin-top:4px}
-footer.jta-footer{border-top:1px solid #333336;padding:32px 0}
-.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
-.footer-brand{font-size:13px;color:#888}
-.footer-links{display:flex;gap:24px}
-.footer-links a{font-size:13px;color:#888;text-decoration:none}
-@media(max-width:600px){.main{padding:56px 0 80px}.next-grid{grid-template-columns:1fr}.card-patreon{order:-1}.inbox-note{padding:24px 20px}.footer-inner{flex-direction:column;align-items:flex-start}}
-
-.call-cta{background:#2A2A2D;border:1px solid #333336;border-radius:4px;padding:28px 32px;margin-bottom:48px;margin-top:48px}
-.call-cta-text{font-size:15px;color:#888;line-height:1.65;margin-bottom:16px}
-.call-cta-link{font-size:14px;color:#5B7A8F;text-decoration:none;font-weight:500}
-
-.jta-nav{flex-wrap:wrap;gap:8px 24px}
-@media(max-width:600px){.jta-nav>div{gap:14px !important}.nav-brand{font-size:13px}.nav-link{font-size:13px}.jta-nav>a.nav-link{display:none}}
-a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #5B7A8F;outline-offset:2px}
-</style>
+<meta property="og:image" content="https://www.johntalksabout.com/assets/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1C1C1E">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/icon-48.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="preload" href="/assets/fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-
-<nav>
-  <div class="jta-inner jta-nav">
-    <div style="display:flex;align-items:center;gap:24px">
-      <a href="/" class="nav-brand">John Talks About</a>
-      <a href="/subscribe/" class="nav-link">Newsletter</a>
-      <a href="/work-with-me/" class="nav-link">Work With Me</a>
-    </div>
-    <a href="https://youtube.com/@JohnTalksUK" class="nav-link" target="_blank" rel="noopener" style="margin-left:auto">21k on YouTube</a>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap head-row">
+  <a class="brand" href="/"><img src="/assets/john-small.jpg" width="64" height="64" alt="">John Talks About</a>
+  <nav class="site-nav" aria-label="Main"><a href="/subscribe/">Newsletter</a><a href="/could-you-leave/">Quiz</a><a href="/#podcast">Podcast</a><a href="/work-with-me/">Work With Me</a><a class="nav-cta" href="https://www.patreon.com/cw/JohnTalksAbout" target="_blank" rel="noopener">Patreon</a></nav>
+</div></header>
+<main id="main">
+<div class="page"><div class="wrap"><div class="narrow">
+  <div class="kicker">Slow Travel Letters</div>
+  <h1 class="page-h1">You're in. First letter lands on Friday.</h1>
+  <div class="prose">
+    <p class="lead">One letter, every Friday. The numbers from that week, what the options account is doing, what I am thinking about.</p>
+    <p>About six in ten readers open it every week. If you reply, I read it.</p>
   </div>
-</nav>
-
-<div class="main">
-  <div class="jta-inner">
-    <div class="kicker">Slow Travel Letters</div>
-    <h1 class="jta-h1">You're in. First letter lands on Friday.</h1>
-    <div class="body-text">
-      <p>Check your inbox now for a confirmation email from AWeber. Click the link inside. That's what puts you on the list properly.</p>
-      <p>After that, you'll hear from me on Friday. One letter. The week in numbers, thinking, and whatever was actually going on.</p>
-    </div>
-    <div class="body-text" style="margin-top:32px;padding-top:32px;border-top:1px solid #333336">
-      <p>Every Friday one letter arrives. Not a traditional newsletter. The real numbers from that week, what the options account is doing, what I am thinking about. It is honest, it is specific, and most people say it is the email they actually open.</p>
-    </div>
-
-    <hr class="divider">
-    <div class="inbox-note">
-      <div class="inbox-label">One thing worth doing now</div>
-      <p class="inbox-text">Add <strong>john@johntalksabout.com</strong> to your contacts. Some inboxes will file the first letter under promotions or updates. Moving it to your main inbox once makes sure it stays there.</p>
-    </div>
-    <div class="next-label">While you wait</div>
-    <div class="next-grid">
-      <a href="https://youtube.com/@JohnTalksUK" class="next-card" target="_blank" rel="noopener">
-        <div class="card-eyebrow">YouTube · 21k subscribers</div>
-        <div class="card-title">Watch the channel</div>
-        <div class="card-desc">The real numbers video. The CT scan. The council tax comparison. Start with whatever's most recent.</div>
-      </a>
-      <a href="https://patreon.com/johntalksabout" class="next-card card-patreon" target="_blank" rel="noopener">
-        <div class="card-eyebrow">Patreon · The Room</div>
-        <div class="card-title">Go deeper</div>
-        <div class="card-desc">Monthly live call. The mechanics behind the life. Options positions, runway, the real conversation.</div>
-      </a>
-    </div>
-    <div class="call-cta">
-      <p class="call-cta-text">If you are already thinking about making a move, a single conversation can save you months of second guessing.</p>
-      <a href="/work-with-me/" class="call-cta-link">Find out more about the calls</a>
-    </div>
-
-    <div class="sign-off">
-      <p>See you Friday.</p>
-      <p>John</p>
+  <div class="box block">
+    <div class="card-eyebrow">One thing worth doing now</div>
+    <p style="font-size:16.5px;color:var(--muted)">Add <span style="color:var(--text)">john@johntalksabout.com</span> to your contacts. Some inboxes file the first letter under promotions or updates. Moving it to your main inbox once keeps it there.</p>
+  </div>
+  <div class="block">
+    <div class="label">While you wait</div>
+    <div class="two">
+      <a class="card" href="https://youtube.com/@JohnTalksUK" target="_blank" rel="noopener"><div class="card-eyebrow">YouTube · 21k subscribers</div><div class="card-title">Watch the channel</div><div class="card-desc">The real numbers video. The CT scan. The council tax comparison. Start with whatever's most recent.</div><div class="card-go">Go to YouTube</div></a>
+      <a class="card" href="https://www.patreon.com/cw/JohnTalksAbout" target="_blank" rel="noopener"><div class="card-eyebrow">Patreon · The Room</div><div class="card-title">Where the mechanics live</div><div class="card-desc">YouTube is the front door. The Room is a monthly live call, the options positions and the runway.</div><div class="card-go">See Patreon</div></a>
     </div>
   </div>
-</div>
-
-<footer class="jta-footer">
-  <div class="jta-inner footer-inner">
-    <span class="footer-brand">John Talks About | Slow Travel Letters</span>
-    <div class="footer-links">
-      <a href="https://youtube.com/@JohnTalksUK" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://patreon.com/johntalksabout" target="_blank" rel="noopener">Patreon</a>
-      <a href="https://instagram.com/johntalksabout" target="_blank" rel="noopener">Instagram</a>
-    </div>
+  <div class="block prose"><p>Already planning a move? I also do one to one calls. 60 minutes, £75. <a class="textlink" href="/work-with-me/">How the calls work</a></p></div>
+  <div class="signoff"><p>See you Friday.</p><p>John</p></div>
+</div></div></div>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <div class="foot-grid">
+    <div><div class="foot-brand">John Talks About</div><div class="foot-tag">Runway. Risk. Reality.</div><div class="foot-tag"><a class="textlink" href="mailto:john@johntalksabout.com">john@johntalksabout.com</a></div></div>
+    <div class="foot-col"><div class="label">The site</div><a href="/subscribe/">Friday letter</a><a href="/could-you-leave/">Could You Leave quiz</a><a href="/#podcast">Second Wind podcast</a><a href="/work-with-me/">One to one calls</a></div>
+    <div class="foot-col"><div class="label">Elsewhere</div><a href="https://youtube.com/@JohnTalksUK" target="_blank" rel="noopener">YouTube</a><a href="https://www.patreon.com/cw/JohnTalksAbout" target="_blank" rel="noopener">Patreon</a><a href="https://instagram.com/johntalksabout" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61595739610836" target="_blank" rel="noopener">Facebook</a><a href="https://open.spotify.com/show/033ft6zJkqmsLYIiyQBE3k" target="_blank" rel="noopener">Spotify</a></div>
   </div>
-</footer>
-
+  <div class="foot-fine"><span>My own experience and my own numbers. Not financial advice.</span><span>© 2026 John Talks About</span></div>
+</div></footer>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

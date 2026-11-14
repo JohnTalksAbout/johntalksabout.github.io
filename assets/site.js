@@ -8,6 +8,7 @@
     var raw=el.getAttribute('data-count'), end=parseFloat(raw), dec=(raw.split('.')[1]||'').length, suf=el.getAttribute('data-suffix')||'', t0=null, dur=1100;
     function step(t){ if(!t0)t0=t; var p=Math.min((t-t0)/dur,1), e=1-Math.pow(1-p,3); el.textContent=(end*e).toFixed(dec)+suf; if(p<1)requestAnimationFrame(step); else el.textContent=end.toFixed(dec)+suf; }
     requestAnimationFrame(step);
+    setTimeout(function(){ el.textContent=end.toFixed(dec)+suf; }, dur+500);
   }
   var items=d.querySelectorAll('.reveal'), counts=d.querySelectorAll('[data-count]');
   if(!('IntersectionObserver' in window)||reduce){ for(var i=0;i<items.length;i++)items[i].classList.add('in'); return; }

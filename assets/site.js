@@ -37,3 +37,22 @@
       if(v.length===3){ render(v); try{ localStorage.setItem(CK,JSON.stringify({at:Date.now(),v:v})); }catch(e){} }
     }).catch(function(){});
 })();
+
+// Signup source tracking. Add ?src=<source> to any link to a page with the AWeber form
+// (e.g. /subscribe?src=instagram) and the subscriber's Ad Tracking in AWeber shows where they came from.
+// Unknown or missing values leave the form's default Ad Tracking untouched.
+(function(){
+  var SOURCES={ instagram:'instagram', 'yt-community':'yt_community', 'yt-description':'yt_description', qr:'qr_code', 'yt-pinned':'yt_pinned_comment' };
+  var p, src;
+  try{ p=new URLSearchParams(location.search); src=(p.get('src')||p.get('utm_source')||'').toLowerCase().trim(); }catch(e){ return; }
+  var label=SOURCES[src]; if(!label) return;
+  var forms=document.querySelectorAll('form[action*="aweber.com"]');
+  for(var i=0;i<forms.length;i++){
+    var f=forms[i], ad=f.querySelector('input[name="meta_adtracking"]');
+    if(!ad){ ad=document.createElement('input'); ad.type='hidden'; ad.name='meta_adtracking'; f.appendChild(ad); }
+    ad.value=label; // AWeber keeps 20 characters at most
+    var tg=f.querySelector('input[name="meta_tags"]');
+    if(!tg){ tg=document.createElement('input'); tg.type='hidden'; tg.name='meta_tags'; f.appendChild(tg); tg.value=''; }
+    tg.value=(tg.value?tg.value+',':'')+'src-'+label.replace(/_/g,'-');
+  }
+})();

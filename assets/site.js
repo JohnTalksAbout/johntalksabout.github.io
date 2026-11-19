@@ -56,3 +56,16 @@
     tg.value=(tg.value?tg.value+',':'')+'src-'+label.replace(/_/g,'-');
   }
 })();
+
+// Visitors arriving from the Instagram "guide" DM (?src=instagram) see the subscribe form framed around the free guide,
+// so it's clear they're in the right place and what happens next. Everyone else sees the page unchanged.
+(function(){
+  var src; try{ src=(new URLSearchParams(location.search).get('src')||'').toLowerCase(); }catch(e){ return; }
+  if(src!=='instagram') return;
+  var card=document.getElementById('jta-subscribe'); if(!card) return;
+  var b=card.querySelector('.from b'), s=card.querySelector('.from span'), btn=card.querySelector('button[type="submit"]');
+  if(b) b.textContent='Your free Southeast Asia guide is one step away.';
+  if(s) s.textContent='Add your name and email, tap confirm in the email we send, and the download link lands in your inbox straight away.';
+  if(btn) btn.textContent='Send me the guide';
+  var k=document.querySelector('.kicker'); if(k) k.textContent='Free guide · 22 places we stayed';
+})();

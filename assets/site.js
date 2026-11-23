@@ -42,7 +42,7 @@
 // (e.g. /subscribe?src=instagram) and the subscriber's Ad Tracking in AWeber shows where they came from.
 // Unknown or missing values leave the form's default Ad Tracking untouched.
 (function(){
-  var SOURCES={ instagram:'instagram', 'yt-community':'yt_community', 'yt-description':'yt_description', qr:'qr_code', 'yt-pinned':'yt_pinned_comment' };
+  var SOURCES={ instagram:'instagram', 'yt-community':'yt_community', 'yt-description':'yt_description', qr:'qr_code', 'yt-pinned':'yt_pinned_comment', kofi:'kofi' };
   var p, src;
   try{ p=new URLSearchParams(location.search); src=(p.get('src')||p.get('utm_source')||'').toLowerCase().trim(); }catch(e){ return; }
   var label=SOURCES[src]; if(!label) return;
